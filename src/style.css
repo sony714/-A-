@@ -168,6 +168,7 @@ main {
     position: relative;
     top: 85px;
     left: 15px;
+    animation: move 5s ease infinite;
 }
 
 .eye_black::after{
@@ -183,5 +184,9 @@ main {
 }
 
 @keyframes move {
-    
-}
+    16%{top:95px;left:30px;}
+    32%{top:100px;left:60px;}
+    48%{top:80px;left:80px}
+    64%{top:100px;left:60px}
+    80%{top:95px;left:30px}
+  }
