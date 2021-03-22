@@ -105,27 +105,27 @@ main {
     top: 112px;
     left: 120px;
 }
-.left::before{
+.leftLine::before{
     content: '';
     display: block;
     width: 2px;
     height: 150px;
     background-color: #000;
-    position:relative;
-    transform: rotate(90deg);
-    top: 110px;
-    left: -80px;
+    position: absolute;
+    transform: rotate(-14deg);
+    top: -15px;
+    left: -55px;
 }
-.left::after {
+.leftLine::after {
     content: '';
     display: block;
     width: 2px;
     height: 150px;
     background-color: #000;
-    position:relative;
-    transform: rotate(75deg);
-    top: 20px;
-    left: -80px;
+    position: absolute;
+    transform: rotate(330deg);
+    top: 10px;
+    left: -110px;
 }
 
 .rightLine {
@@ -155,11 +155,36 @@ main {
     height: 150px;
     background-color: #000;
     position:relative;
-    transform: rotate(20deg);
-    top: -145px;
+    transform: rotate(26deg);
+    top: -136px;
     right:-100px;
 }
 
+.eye_black{
+    width: 25px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: #000;
+    position: relative;
+    top: 85px;
+    left: 15px;
+}
+
+.eye_black::after{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 16px;
+    border-radius: 5px/8px;
+    background-color: white;
+    position: relative;
+    left: 5px;
+    top: 8px;
+}
+
+@keyframes move {
+    
+}
 
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */
