@@ -49,7 +49,7 @@ main {
     background-color: rgb(185,3,25);
     position: relative;
     left: 50%;
-    margin-left: -20px;
+    margin-left: -23px;
     top:55px;
     z-index: 1;
 }
@@ -70,7 +70,7 @@ main {
     background-color: #000;
     position: absolute;
     left: 50%;
-    margin-left: -1px;
+    margin-left: -2.5   px;
     top:95px;
     z-index: 1;
 }
@@ -92,9 +92,74 @@ main {
     position: relative;
     width: 402px;
     height: 401px;
-    top: -5px;
+    top: -3px;
     left: -1.5px;
     background-color: #fff;
 }
+.leftLine{
+    width: 2px;
+    height: 150px;
+    background-color: #000;
+    position: absolute;
+    transform: rotate(285deg);
+    top: 112px;
+    left: 120px;
+}
+.left::before{
+    content: '';
+    display: block;
+    width: 2px;
+    height: 150px;
+    background-color: #000;
+    position:relative;
+    transform: rotate(90deg);
+    top: 110px;
+    left: -80px;
+}
+.left::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 150px;
+    background-color: #000;
+    position:relative;
+    transform: rotate(75deg);
+    top: 20px;
+    left: -80px;
+}
+
+.rightLine {
+    width: 2px;
+    height: 150px;
+    background-color: #000;
+    position: absolute;
+    transform: rotate(75deg);
+    top: 112px;
+    right: 125px;
+}
+.rightLine::before{
+    content: '';
+    display: block;
+    width: 2px;
+    height: 150px;
+    background-color: #000;
+    position:relative;
+    transform: rotate(10deg);
+    top: -5px;
+    right:-50px;
+}
+.rightLine::after{
+    content: '';
+    display: block;
+    width: 2px;
+    height: 150px;
+    background-color: #000;
+    position:relative;
+    transform: rotate(20deg);
+    top: -145px;
+    right:-100px;
+}
+
+
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */
