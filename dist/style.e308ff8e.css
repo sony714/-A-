@@ -7,7 +7,7 @@ main {
     width: 600px;
     height: 600px;
     border-radius: 50%; 
-    border: 3   px solid black;
+    border: 3px solid black;
     margin: 10vh auto;
     background-color: rgb(60,157,202);
     position: relative;
@@ -16,7 +16,7 @@ main {
 .face {
     width: 540px;
     height: 480px;
-    border:1px solid thick;
+    border:2px solid thick;
     background-color: white;
     border-radius: 270px/240px;
     position: absolute;
@@ -51,6 +51,7 @@ main {
     left: 50%;
     margin-left: -20px;
     top:55px;
+    z-index: 1;
 }
 .nose::after{
     content: '';
@@ -62,6 +63,38 @@ main {
     top: 15px;
     left: 8px;
     background-color:white;
+}
+.centerLine{
+    width: 2px;
+    height: 290px;
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    margin-left: -1px;
+    top:95px;
+    z-index: 1;
+}
+
+.mouth {
+   width: 400px;
+   height: 400px;
+   border-radius: 100%;
+   position: relative;
+   left: 50%;
+   margin-left: -200px;
+   bottom: 52px;
+   background-color: #000;
+}
+.mouth::after{
+    content: '';
+    display: block;
+    border-radius: 100%;
+    position: relative;
+    width: 402px;
+    height: 401px;
+    top: -5px;
+    left: -1.5px;
+    background-color: #fff;
 }
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */
