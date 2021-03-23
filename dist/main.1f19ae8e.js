@@ -117,26 +117,79 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"main.js":[function(require,module,exports) {
+})({"style.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var string = "*{\nbox-sizing:border-box;\npadding:0;margin:0;\n}\n\nmain{\nwidth:600px;\nheight:600px;\nborder-radius:50%;\nborder:3px solid black;\nmargin:10vh auto;\nbackground-color:rgb(60,157,202);\nposition:relative;\n}\n\n.face{\nwidth:540px;\nheight:480px;\nborder:2px solid thick;\nbackground-color:white;\nborder-radius:270px/240px;\nposition:absolute;\ntop:110px;\nleft:30px;\n}\n.eye{\nwidth:120px;\nheight:140px;\nborder:1px solid black;\nborder-radius:60px/70px;\nbackground-color:white;\nz-index:1;\n}\n\n.left{\nposition:absolute;\nright:50%;\ntop:55px;\n}\n.right{\nposition:absolute;\nleft:50%;\ntop:55px;\n}\n.nose{\nwidth:40px;\nheight:40px;\nborder-radius:50%;\nbackground-color:rgb(185,3,25);\nposition:relative;\nleft:50%;\nmargin-left:-23px;\ntop:55px;\nz-index:1;\n}\n.nose::after{\ncontent:'';\ndisplay:block;\nwidth:15px;\nheight:15px;\nborder-radius:50%;\nposition:relative;\ntop:15px;\nleft:8px;\nbackground-color:white;\n}\n.centerLine{\nwidth:2px;\nheight:290px;\nbackground-color:#000;\nposition:absolute;\nleft:50%;\nmargin-left:-2.5px;\ntop:95px;\nz-index:1;\n}\n\n.mouth{\nwidth:400px;\nheight:400px;\nborder-radius:100%;\nposition:relative;\nleft:50%;\nmargin-left:-200px;\nbottom:52px;\nbackground-color:#000;\n}\n.mouth::after{\ncontent:'';\ndisplay:block;\nborder-radius:100%;\nposition:relative;\nwidth:402px;\nheight:401px;\ntop:-3px;\nleft:-1.5px;\nbackground-color:#fff;\n}\n.leftLine{\nwidth:2px;\nheight:150px;\nbackground-color:#000;\nposition:absolute;\ntransform:rotate(285deg);\ntop:112px;\nleft:120px;\n}\n.leftLine::before{\ncontent:'';\ndisplay:block;\nwidth:2px;\nheight:150px;\nbackground-color:#000;\nposition:absolute;\ntransform:rotate(-14deg);\ntop:-15px;\nleft:-55px;\n}\n.leftLine::after{\ncontent:'';\ndisplay:block;\nwidth:2px;\nheight:150px;\nbackground-color:#000;\nposition:absolute;\ntransform:rotate(330deg);\ntop:10px;\nleft:-110px;\n}\n\n.rightLine{\nwidth:2px;\nheight:150px;\nbackground-color:#000;\nposition:absolute;\ntransform:rotate(75deg);\ntop:112px;\nright:125px;\n}\n.rightLine::before{\ncontent:'';\ndisplay:block;\nwidth:2px;\nheight:150px;\nbackground-color:#000;\nposition:relative;\ntransform:rotate(10deg);\ntop:-5px;\nright:-50px;\n}\n.rightLine::after{\ncontent:'';\ndisplay:block;\nwidth:2px;\nheight:150px;\nbackground-color:#000;\nposition:relative;\ntransform:rotate(26deg);\ntop:-136px;\nright:-100px;\n}\n\n.eye_black{\nwidth:25px;\nheight:35px;\nborder-radius:100%;\nbackground-color:#000;\nposition:relative;\ntop:85px;\nleft:15px;\nanimation:move 5s ease infinite;\n}\n\n.eye_black::after{\ncontent:'';\ndisplay:block;\nwidth:10px;\nheight:16px;\nborder-radius:5px/8px;\nbackground-color:white;\nposition:relative;\nleft:5px;\ntop:8px;\n}\n\n@keyframes move{\n16%{top:95px;left:30px;}\n32%{top:100px;left:60px;}\n48%{top:80px;left:80px}\n64%{top:100px;left:60px}\n80%{top:95px;left:30px}\n}";
+var _default = string;
+exports.default = _default;
+},{}],"main.js":[function(require,module,exports) {
+"use strict";
+
+var _style = _interopRequireDefault(require("./style.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var n = 0;
-var string = "\n*{\n    box-sizing: border-box;\n    padding: 0;margin: 0;\n}\n\nmain {\n    width: 600px;\n    height: 600px;\n    border-radius: 50%; \n    border: 3px solid black;\n    margin: 10vh auto;\n    background-color: rgb(60,157,202);\n    position: relative;\n}\n\n.face {\n    width: 540px;\n    height: 480px;\n    border:2px solid thick;\n    background-color: white;\n    border-radius: 270px/240px;\n    position: absolute;\n    top: 110px;\n    left: 30px;\n}\n.eye {\n    width: 120px;\n    height: 140px;\n    border: 1px solid black;\n    border-radius: 60px/70px;\n    background-color: white;\n    z-index: 1;\n}\n\n.left {\n    position: absolute;\n    right: 50%;\n    top: 55px;\n}\n .right {\n    position: absolute;\n    left: 50%;\n    top: 55px;\n}\n.nose {\n    width: 40px;\n    height: 40px;\n    border-radius: 50%;\n    background-color: rgb(185,3,25);\n    position: relative;\n    left: 50%;\n    margin-left: -23px;\n    top:55px;\n    z-index: 1;\n}\n.nose::after{\n    content: '';\n    display: block;\n    width: 15px;\n    height: 15px;\n    border-radius: 50%;\n    position: relative;\n    top: 15px;\n    left: 8px;\n    background-color:white;\n}\n.centerLine{\n    width: 2px;\n    height: 290px;\n    background-color: #000;\n    position: absolute;\n    left: 50%;\n    margin-left: -2.5   px;\n    top:95px;\n    z-index: 1;\n}\n\n.mouth {\n   width: 400px;\n   height: 400px;\n   border-radius: 100%;\n   position: relative;\n   left: 50%;\n   margin-left: -200px;\n   bottom: 52px;\n   background-color: #000;\n}\n.mouth::after{\n    content: '';\n    display: block;\n    border-radius: 100%;\n    position: relative;\n    width: 402px;\n    height: 401px;\n    top: -3px;\n    left: -1.5px;\n    background-color: #fff;\n}\n.leftLine{\n    width: 2px;\n    height: 150px;\n    background-color: #000;\n    position: absolute;\n    transform: rotate(285deg);\n    top: 112px;\n    left: 120px;\n}\n.leftLine::before{\n    content: '';\n    display: block;\n    width: 2px;\n    height: 150px;\n    background-color: #000;\n    position: absolute;\n    transform: rotate(-14deg);\n    top: -15px;\n    left: -55px;\n}\n.leftLine::after {\n    content: '';\n    display: block;\n    width: 2px;\n    height: 150px;\n    background-color: #000;\n    position: absolute;\n    transform: rotate(330deg);\n    top: 10px;\n    left: -110px;\n}\n\n.rightLine {\n    width: 2px;\n    height: 150px;\n    background-color: #000;\n    position: absolute;\n    transform: rotate(75deg);\n    top: 112px;\n    right: 125px;\n}\n.rightLine::before{\n    content: '';\n    display: block;\n    width: 2px;\n    height: 150px;\n    background-color: #000;\n    position:relative;\n    transform: rotate(10deg);\n    top: -5px;\n    right:-50px;\n}\n.rightLine::after{\n    content: '';\n    display: block;\n    width: 2px;\n    height: 150px;\n    background-color: #000;\n    position:relative;\n    transform: rotate(26deg);\n    top: -136px;\n    right:-100px;\n}\n\n.eye_black{\n    width: 25px;\n    height: 35px;\n    border-radius: 100%;\n    background-color: #000;\n    position: relative;\n    top: 85px;\n    left: 15px;\n    animation: move 5s ease infinite;\n}\n\n.eye_black::after{\n    content: '';\n    display: block;\n    width: 10px;\n    height: 16px;\n    border-radius: 5px/8px;\n    background-color: white;\n    position: relative;\n    left: 5px;\n    top: 8px;\n}\n\n@keyframes move {\n    16%{top:95px;left:30px;}\n    32%{top:100px;left:60px;}\n    48%{top:80px;left:80px}\n    64%{top:100px;left:60px}\n    80%{top:95px;left:30px}\n  }\n";
+var time = 50;
 var move = document.getElementById('move');
 var move2 = document.getElementById('move2');
-move.innerText = string.substr(0, n);
-move2.innerHTML = string.substr(0, n);
-var id = setInterval(function () {
+move.innerText = _style.default.substr(0, n);
+move2.innerHTML = _style.default.substr(0, n);
+
+var run = function run() {
   n = n + 1;
 
-  if (n > string.length) {
+  if (n > _style.default.length) {
     window.clearInterval(id);
     return;
   }
 
-  move.innerText = string.substr(0, n);
-  move2.innerHTML = string.substr(0, n);
+  move.innerText = _style.default.substr(0, n);
+  move2.innerHTML = _style.default.substr(0, n);
   window.scrollTo(0, 9999);
-}, 0);
-},{}],"C:/Users/meng/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+};
+
+var play = function play() {
+  return setInterval(run, time);
+};
+
+var pause = function pause() {
+  window.clearInterval(id);
+};
+
+var id = play();
+
+btnPause.onclick = function () {
+  pause();
+};
+
+btnPlay.onclick = function () {
+  id = play();
+};
+
+btnSlow.onclick = function () {
+  pause();
+  time = 200;
+  id = play();
+};
+
+btnNormal.onclick = function () {
+  pause();
+  time = 50;
+  id = play();
+};
+
+btnFast.onclick = function () {
+  pause();
+  time = 0;
+  id = play();
+};
+},{"./style.js":"style.js"}],"C:/Users/meng/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -164,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55878" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56563" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
