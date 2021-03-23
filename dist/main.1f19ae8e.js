@@ -117,79 +117,26 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"C:/Users/meng/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"main.js":[function(require,module,exports) {
+var n = 0;
+var string = "\n*{\n    box-sizing: border-box;\n    padding: 0;margin: 0;\n}\n\nmain {\n    width: 600px;\n    height: 600px;\n    border-radius: 50%; \n    border: 3px solid black;\n    margin: 10vh auto;\n    background-color: rgb(60,157,202);\n    position: relative;\n}\n\n.face {\n    width: 540px;\n    height: 480px;\n    border:2px solid thick;\n    background-color: white;\n    border-radius: 270px/240px;\n    position: absolute;\n    top: 110px;\n    left: 30px;\n}\n.eye {\n    width: 120px;\n    height: 140px;\n    border: 1px solid black;\n    border-radius: 60px/70px;\n    background-color: white;\n    z-index: 1;\n}\n\n.left {\n    position: absolute;\n    right: 50%;\n    top: 55px;\n}\n .right {\n    position: absolute;\n    left: 50%;\n    top: 55px;\n}\n.nose {\n    width: 40px;\n    height: 40px;\n    border-radius: 50%;\n    background-color: rgb(185,3,25);\n    position: relative;\n    left: 50%;\n    margin-left: -23px;\n    top:55px;\n    z-index: 1;\n}\n.nose::after{\n    content: '';\n    display: block;\n    width: 15px;\n    height: 15px;\n    border-radius: 50%;\n    position: relative;\n    top: 15px;\n    left: 8px;\n    background-color:white;\n}\n.centerLine{\n    width: 2px;\n    height: 290px;\n    background-color: #000;\n    position: absolute;\n    left: 50%;\n    margin-left: -2.5   px;\n    top:95px;\n    z-index: 1;\n}\n\n.mouth {\n   width: 400px;\n   height: 400px;\n   border-radius: 100%;\n   position: relative;\n   left: 50%;\n   margin-left: -200px;\n   bottom: 52px;\n   background-color: #000;\n}\n.mouth::after{\n    content: '';\n    display: block;\n    border-radius: 100%;\n    position: relative;\n    width: 402px;\n    height: 401px;\n    top: -3px;\n    left: -1.5px;\n    background-color: #fff;\n}\n.leftLine{\n    width: 2px;\n    height: 150px;\n    background-color: #000;\n    position: absolute;\n    transform: rotate(285deg);\n    top: 112px;\n    left: 120px;\n}\n.leftLine::before{\n    content: '';\n    display: block;\n    width: 2px;\n    height: 150px;\n    background-color: #000;\n    position: absolute;\n    transform: rotate(-14deg);\n    top: -15px;\n    left: -55px;\n}\n.leftLine::after {\n    content: '';\n    display: block;\n    width: 2px;\n    height: 150px;\n    background-color: #000;\n    position: absolute;\n    transform: rotate(330deg);\n    top: 10px;\n    left: -110px;\n}\n\n.rightLine {\n    width: 2px;\n    height: 150px;\n    background-color: #000;\n    position: absolute;\n    transform: rotate(75deg);\n    top: 112px;\n    right: 125px;\n}\n.rightLine::before{\n    content: '';\n    display: block;\n    width: 2px;\n    height: 150px;\n    background-color: #000;\n    position:relative;\n    transform: rotate(10deg);\n    top: -5px;\n    right:-50px;\n}\n.rightLine::after{\n    content: '';\n    display: block;\n    width: 2px;\n    height: 150px;\n    background-color: #000;\n    position:relative;\n    transform: rotate(26deg);\n    top: -136px;\n    right:-100px;\n}\n\n.eye_black{\n    width: 25px;\n    height: 35px;\n    border-radius: 100%;\n    background-color: #000;\n    position: relative;\n    top: 85px;\n    left: 15px;\n    animation: move 5s ease infinite;\n}\n\n.eye_black::after{\n    content: '';\n    display: block;\n    width: 10px;\n    height: 16px;\n    border-radius: 5px/8px;\n    background-color: white;\n    position: relative;\n    left: 5px;\n    top: 8px;\n}\n\n@keyframes move {\n    16%{top:95px;left:30px;}\n    32%{top:100px;left:60px;}\n    48%{top:80px;left:80px}\n    64%{top:100px;left:60px}\n    80%{top:95px;left:30px}\n  }\n";
+var move = document.getElementById('move');
+var move2 = document.getElementById('move2');
+move.innerText = string.substr(0, n);
+move2.innerHTML = string.substr(0, n);
+var id = setInterval(function () {
+  n = n + 1;
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"C:/Users/meng/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
+  if (n > string.length) {
+    window.clearInterval(id);
     return;
   }
 
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"C:/Users/meng/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/bundle-url.js"}],"style.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"C:/Users/meng/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/css-loader.js"}],"C:/Users/meng/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+  move.innerText = string.substr(0, n);
+  move2.innerHTML = string.substr(0, n);
+  window.scrollTo(0, 9999);
+}, 0);
+},{}],"C:/Users/meng/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +340,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/meng/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/style.e308ff8e.js.map
+},{}]},{},["C:/Users/meng/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js","main.js"], null)
+//# sourceMappingURL=/main.1f19ae8e.js.map
