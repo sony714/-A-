@@ -18,8 +18,8 @@ const run = () => {
 const play = () => {
     return setInterval(run, time)
 }
-const pause = () => {
-    window.clearInterval(id)
+function pause() {
+    window.clearInterval(id);
 }
 let id = play();
 

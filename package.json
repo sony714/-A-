@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "style.js": "^0.0.2"
+    "style.js": "^0.0.2",
+    "type": "module"
   }
 }
